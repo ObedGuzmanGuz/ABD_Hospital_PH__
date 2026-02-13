@@ -11,7 +11,6 @@ El enfoque del proyecto es **general y demostrativo**, mostrando el uso correcto
 - Mantener integridad y reutilización del código
 
 
-
 ## ⚙️ Rutinas Implementadas
 
 ### 🔧 Funciones SQL
