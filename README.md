@@ -1,4 +1,4 @@
-# 🏥 Practica 05 - Población Dinámica de Pacientes
+# 🏥 Practica 05 - Población de Datos de los Pacientes
 
 ## 📌 Descripción
 
@@ -44,14 +44,6 @@ tbb_personas_fisicas (PK/FK ID)
 &nbsp;&nbsp;&nbsp;&nbsp;↓  
 tbb_pacientes (PK/FK ID)  
 
-### Integridad Referencial
-
-- Llaves primarias en cada tabla.
-- Llaves foráneas que garantizan la relación jerárquica.
-- Restricciones UNIQUE para:
-  - RFC
-  - CURP
-- Índices en campos críticos para optimización de consultas.
 
 ---
 
@@ -68,6 +60,8 @@ tbb_pacientes (PK/FK ID)
 - `fn_titulo_cortesia()`
 - `fn_estatus_medico()`
 - `fn_estatus_vida()`
+- `fn_generar_edad()`
+- `fn_pais_origen()`
 - `fn_fecha_ultima_cita()`
 
 Las funciones fueron diseñadas bajo el principio de modularidad para su reutilización en futuras poblaciones de datos.
@@ -87,7 +81,7 @@ CALL sp_poblar_pacientes_goog(
     p_edad_min,
     p_edad_max,
     p_estatus_vida,
-    p_estatus_medico VARCHAR(50)   
+    p_estatus_medico   
 );
 Características del procedimiento
 
@@ -96,8 +90,6 @@ Generación dinámica de datos.
 Validación de parámetros.
 
 Uso de transacciones.
-
-Commit por lotes para soportar hasta 1,000,000 de registros.
 
 Respeto absoluto de integridad referencial.
 
@@ -112,15 +104,7 @@ Test	Escenario
 5	Registro de 10000 pacientes
 6	Registro de 1000000 pacientes
 
-Resultados obtenidos:
 
-Integridad referencial intacta.
-
-Sin duplicidad de datos únicos.
-
-Rendimiento optimizado mediante commits por lote.
-
-Consistencia total entre tablas relacionadas.
 
 🧪 Pruebas de Naturaleza
 Test	Escenario
@@ -156,8 +140,6 @@ Título de cortesía acorde al género.
 
 Grupo sanguíneo válido.
 
-Fecha de última cita no futura.
-
 Validación de parámetros de entrada.
 
 📦 Respaldos Incluidos
@@ -177,8 +159,11 @@ El desarrollo se realizó respetando el manejo de ramales:
 main
     └── Practica05
         ├── Practica05-Obed
-        ├── Practica05-[Integrante]
-
+        ├── Practica05- Yazmin
+        ├── Practica05- Citlalli
+        ├── Practica05- Michelle
+        
+        
 Cada integrante trabajó en su propia rama derivada de Practica05, garantizando control de versiones y colaboración ordenada.
 
 🏁 Conclusión
@@ -199,4 +184,3 @@ Uso de mecanismos avanzados de SQL.
 
 Documentación y respaldos completos.
 
-El sistema demuestra capacidad para generar hasta 1,000,000 de registros manteniendo consistencia y rendimiento adecuado.
