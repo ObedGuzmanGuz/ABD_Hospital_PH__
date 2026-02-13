@@ -1,0 +1,3 @@
+--PRUEBAS DE NATURALEZA PARA LA TABLA PACIENTES--
+
+CALL sp_poblar_pacientes_hospital(150,'F',NULL,NULL,NULL);
